@@ -3,79 +3,104 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRID LAYOUT 1</title>
+    <title>Grid Layout 1</title>
     <style>
         body {
+            margin: 0;
+            font-family: sans-serif;
+            display: grid;
             width: 960px;
-            margin: 20px auto 0 auto;
+            grid-gap: 20px;
+            margin: 20px auto;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 80px 400px 200px 50px;
+            grid-template-areas: "logo .    navi navi" "img1 img1 img1 img1" "pro1 pro1 pro2 pro2" "foot foot foot foot";
         }
         
         div,
-        footer {
+        nav ul,
+        header,
+        h1,
+        section,
+        footer,
+        a {
             background: silver;
         }
         
-        nav,
-        section,
-        main,
-        footer {
-            display: grid;
-            width: 100%;
-            margin-bottom: 10px;
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+        }
+        
+        div:nth-of-type(1) {
+            grid-area: logo;
         }
         
         nav {
-            grid-template: 80px / 120px 1fr;
-            grid-gap: 20px;
-        }
-        
-        nav div:last-of-type {
-            height: 40px;
+            grid-area: navi;
             align-self: center;
         }
         
-        section {
-            height: 200px;
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            height: 50px;
+            grid-template: auto / repeat(4, 1fr);
+            grid-gap: 20px;
+            justify-items: center;
+            align-content: center;
         }
         
-        main {
-            height: 160px;
-            grid-template: 160px / repeat(2, 475px);
-            grid-column: 2;
-            grid-gap: 10px;
-            align-content: center;
-            justify-content: space-evenly;
+        header {
+            grid-area: head;
+        }
+        
+        #image1 {
+            grid-area: img1;
+        }
+        
+        #product1 {
+            grid-area: pro1;
+        }
+        
+        #product2 {
+            grid-area: pro2;
         }
         
         footer {
-            height: 60px;
-            align-items: center;
-            justify-items: center;
+            grid-area: foot;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-
+    <div>Company Logo</div>
     <nav>
-        <div>Company logo</div>
-        <div>Navigation</div>
+        <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+        </ul>
     </nav>
-
-    <section>
+    <section id="image1">
         <div>Featured Product Image</div>
     </section>
 
-    <main>
-        <div>Product 1</div>
-        <div>Product 2</div>
-    </main>
+    <section id="product1">Product 1</section>
+    <section id="product2">Product 2</section>
+
 
     <footer>
         <p>Copyright Notice</p>
     </footer>
-
 </body>
 
 </html>
