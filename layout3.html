@@ -5,6 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Layout 3</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            display: grid;
+            width: 1000px;
+            grid-gap: 20px;
+            margin: 20px auto;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 80px 400px 50px 200px 200px 50px;
+            grid-template-areas: "logo .    navi navi" "head head head head" "titl .    titl2 ." "blo1 blo1 pro1 pro2" "blo2 blo2 pro3 pro4" "foot foot foot foot";
+        }
+        
+        #blog1 {
+            grid-area: blo1;
+        }
+        
+        #prod1 {
+            grid-area: pro1;
+        }
+        
+        #prod2 {
+            grid-area: pro2;
+        }
+        
+        #blog2 {
+            grid-area: blo2;
+        }
+        
+        #prod3 {
+            grid-area: pro3;
+        }
+        
+        #prod4 {
+            grid-area: pro4;
+        }
+    </style>
 </head>
 
 <body>
