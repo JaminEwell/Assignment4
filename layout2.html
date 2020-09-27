@@ -38,6 +38,34 @@
             grid-area: navi;
             align-self: center;
         }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            height: 50px;
+            grid-template: auto / repeat(4, 1fr);
+            grid-gap: 20px;
+            justify-items: center;
+            align-content: center;
+        }
+        
+        main {
+            grid-area: main;
+            display: grid;
+            grid-gap: 10px;
+            grid-template: repeat(3, 170px) / repeat(3, 1fr);
+        }
+        
+        header {
+            grid-area: head;
+        }
+        
+        footer {
+            grid-area: foot;
+            text-align: center;
+        }
     </style>
 </head>
 
