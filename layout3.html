@@ -56,6 +56,23 @@
             color: black;
             text-decoration: none;
         }
+        
+        nav {
+            grid-area: navi;
+            align-self: center;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            height: 50px;
+            grid-template: auto / repeat(4, 1fr);
+            grid-gap: 20px;
+            justify-items: center;
+            align-content: center;
+        }
     </style>
 </head>
 
