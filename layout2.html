@@ -15,7 +15,7 @@
             margin: 20px auto;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: 80px 225px auto 50px;
-            grid-template-areas: "logo .    navi navi" "head head head head" "main main main main" "foot foot foot foot";
+            grid-template-areas: "comp .    navi navi" "head head head head" "main main main main" "foot foot foot foot";
         }
         
         div,
@@ -29,12 +29,21 @@
             color: black;
             text-decoration: none;
         }
+        
+        #company {
+            grid-area: comp;
+        }
+        
+        nav {
+            grid-area: navi;
+            align-self: center;
+        }
     </style>
 </head>
 
 <body>
 
-    <div id="logo">Company Logo</div>
+    <div id="company">Company Logo</div>
     <nav>
         <ul>
             <li><a href="#">Item 1</a></li>
